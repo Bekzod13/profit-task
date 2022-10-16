@@ -9,6 +9,8 @@ import Navbar from '../components/navbar/Navbar';
 import Home from '../pages/Home';
 
 const MainRoutes = () => {
+
+
   return (
     <>
         <Navbar/>

@@ -1,19 +1,25 @@
 import './navbar.css';
 import {Link} from 'react-router-dom';
-import { memo, useState } from 'react';
+import { memo, useContext, useState } from 'react';
+import Context from '../../context/Context';
 
 
 
 // import images
 import navTopImg from '../../assets/images/nav-top-img.webp';
 import logo from '../../assets/images/logo.svg';
+import logoDark from '../../assets/images/logo-dark.svg';
 
 
 // import icons
-import {FiChevronDown} from 'react-icons/fi';
+import {FiChevronDown, FiSun} from 'react-icons/fi';
 import {BiDotsVerticalRounded} from 'react-icons/bi';
+import {RiMoonFill} from 'react-icons/ri';
+import {CiBellOn, CiSearch} from 'react-icons/ci';
 
 const Navbar = () => {
+
+    const {darkMode, setDarkMode} = useContext(Context);
 
     const [navFixed, setNavFixed] = useState(false)
 
@@ -36,7 +42,11 @@ const Navbar = () => {
             <nav className="container">
                 <div className="nav-left">
                     <Link className='logo' to={'/'}>
-                        <img src={logo} alt="FOXIZ" />
+                        {
+                            darkMode ? 
+                            <img src={logoDark} alt="FOXIZ" />:
+                            <img src={logo} alt="FOXIZ" />
+                        }
                     </Link>
 
             {/* nav link list */}
@@ -56,6 +66,26 @@ const Navbar = () => {
                     <Link to={'/'} className="nav-link-box nav-dots" title='More'>
                         <BiDotsVerticalRounded/>
                     </Link>
+                </div>
+                <div className="nav-right">
+                    <Link className='nav-login-btn' to={'/'}>
+                        Sign In
+                    </Link>
+                    <div className="nav-icon" title='Nofication'>
+                        <CiBellOn/>
+                    </div>
+                    <div className="nav-icon"  title='Search'>
+                        <CiSearch/>
+                    </div>
+                    <div className="dark-btn" onClick={()=>setDarkMode(!darkMode)}>
+                        <div className={darkMode? "dark-toggle down":"dark-toggle"}>
+                            {
+                                darkMode ? 
+                                <RiMoonFill/>:
+                                <FiSun/>
+                            }
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>

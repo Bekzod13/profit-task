@@ -8,11 +8,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  font-size: 14px;
-  font-weight: 500;
-  font-family: 'Encode Sans Condensed', sans-serif;
-}
 .container{
   width: 100%;
   max-width: 1280px;
@@ -33,13 +28,20 @@ a{
   --blue2: #5772ff;
   --top-site-bg: #0e0f12;
   --fcolor: #282828;
+  --gray: #ccc;
+  --shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .dark{
   --white: #282828;
   --fcolor: #fff;
+  position: fixed;
+  top: 0;
 }
-
-main{
+body{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Encode Sans Condensed', sans-serif;
   background: var(--white);
+  color: var(--fcolor);
 }
