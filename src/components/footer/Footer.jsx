@@ -32,7 +32,7 @@ const Footer = () => {
         <div className='footer' > 
           <footer className="container">
             <div className="foot-box foot-box-1">
-                <div className="foot-slash">//</div>
+                <div className="foot-slash">{"//"}</div>
                 <p>
                     <span>W</span>e influence 20 million users and is the number one business and
                     technology news network on the planet</p>
