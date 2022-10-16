@@ -1,11 +1,45 @@
+/* google font Oxygen and Encode Sans Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* settings */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Encode Sans Condensed', sans-serif;
 }
 .container{
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 5px;
+}
+a{
+  text-decoration: none;
+}
+:root{
+  --white: #fff;
+  --pink: #ff0084;
+  --red: #ff184e;
+  --red2: #ff184ee6;
+  --dark: #191c20;
+  --yellow: #ffc300;
+  --blue: #729dff;
+  --blue2: #5772ff;
+  --top-site-bg: #0e0f12;
+  --fcolor: #282828;
+}
+
+.dark{
+  --white: #282828;
+  --fcolor: #fff;
+}
+
+main{
+  background: var(--white);
 }

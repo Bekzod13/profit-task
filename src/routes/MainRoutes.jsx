@@ -1,8 +1,25 @@
-import React from 'react'
+import {Routes, Route} from 'react-router-dom';
+
+// import components
+import Footer from '../components/footer/Footer';
+import Navbar from '../components/navbar/Navbar';
+
+
+// import pages
+import Home from '../pages/Home';
 
 const MainRoutes = () => {
   return (
-    <div>MainRoutes</div>
+    <>
+        <Navbar/>
+        <main>
+            <Routes>
+                <Route path='/' element={
+                    <Home/>} />
+            </Routes>
+        </main>
+        <Footer/>   
+    </>
   )
 }
 
