@@ -140,3 +140,9 @@ nav{
     background: var(--red);
     color: var(--white);
 }
+
+@media screen and (max-width: 1000px) {
+    .nav-link-box{
+        display: none;
+    }
+}
