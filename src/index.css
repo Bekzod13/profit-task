@@ -43,7 +43,6 @@ a{
 }
 body{
   font-size: 14px;
-  font-weight: 500;
   font-family: 'Encode Sans Condensed', sans-serif;
   background: var(--white);
   color: var(--fcolor);

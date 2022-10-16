@@ -149,6 +149,7 @@ nav{
     position: fixed;
     right: 10px;
     top: 50%;
+    z-index: 100;
     transform: translateY(-50%);
 }
 .buy,

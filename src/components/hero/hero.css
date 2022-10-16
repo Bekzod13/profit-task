@@ -1,0 +1,119 @@
+.hero-navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    box-shadow: var(--shadow);
+}
+.hero-nav-left{
+    display: flex;
+    align-items: center;
+}
+.hero-hot-news{
+    display: flex;
+    box-shadow: inset var(--shadow);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.hot-new-icon{
+    color: var(--red);
+    margin-right: 4px;
+}
+.hero-new-title{
+    font-weight: 600;
+    font-size: 15px;
+}
+.hero-nav-right{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.next-news-btn{
+    position: absolute;
+    left: -100px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.hero-nav-link{
+    display: flex;
+    margin-left: 10px;
+    box-shadow: inset var(--shadow);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+.hero-nav-link:hover{
+    background: var(--red);
+    color: #fff;
+    box-shadow: 0 0 5px 2px var(--red);
+}
+.hero-nav-mobile,
+.hero-nav-mobile-2{
+    display: none;
+}
+.hero-main{
+    margin: 20px 0;
+    width: 100%;
+    height: 450px;
+    display: grid;
+    gap: 18px;
+    grid-template-areas: 
+    "hero1 hero2"
+    "hero1 hero3";
+}
+.hero-box{
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+}
+.hero-item-category{
+    display: flex;
+}
+.hero-box-1{
+    grid-area: hero1;
+}
+.hero-box-2{
+    grid-area: hero2;
+}
+.hero-box-3{
+    grid-area: hero3;
+}
+.hero-box-4{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .hero-nav-mobile,
+    .hero-nav-mobile-2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .hero-nav-mobile-2{
+        padding: 10px 0;
+    }
+    .hero-nav-left, 
+    .hero-nav-right{
+        display: none;
+    }
+    .hero-link{
+        font-weight: 600;
+    }
+    .hero-new-title-2{
+        display: flex;
+    }
+    .next-news-btn-2{
+        cursor: pointer;
+    }
+}
