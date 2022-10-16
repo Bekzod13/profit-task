@@ -138,11 +138,86 @@ nav{
 .dark-toggle.down{
     left: 20px;
     background: var(--red);
-    color: var(--white);
+    color: var(--fcolor);
 }
-
+.toggle-nav-btn{
+    display: none;
+}
+.demo-buy{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buy,
+.demo{
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: .3s;
+    cursor: pointer;
+    color: #282828;
+}
+.buy p,
+.demo p{
+    font-size: 12px;
+}
+.buy div,
+.buy p{
+    color: #5772ff;
+}
+.buy div,
+.demo div{
+    font-size: 24px;
+}
+.buy:hover {
+    background: var(--blue2);
+}
+.buy:hover {
+    background: var(--blue2);
+}
+.buy:hover p,
+.buy:hover div{
+    color: #fff;
+}
+.demo:hover{
+    color: #5772ff;
+}
 @media screen and (max-width: 1000px) {
-    .nav-link-box{
+    .nav-link-box,
+    .nav-login-btn,
+    .nav-icon-bell{
         display: none;
+    }
+    header{
+        height: 40px;
+    }
+    .toggle-nav-btn{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--fcolor);
+        font-size: 32px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .demo-buy{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        right: 50%;
+        top: auto;
+        bottom: 10px;
+        transform: translateX(50%);
     }
 }

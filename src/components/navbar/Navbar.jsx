@@ -13,9 +13,11 @@ import logoDark from '../../assets/images/logo-dark.svg';
 
 // import icons
 import {FiChevronDown, FiSun} from 'react-icons/fi';
-import {BiDotsVerticalRounded} from 'react-icons/bi';
+import {BiDotsVerticalRounded, BiMenuAltLeft} from 'react-icons/bi';
 import {RiMoonFill} from 'react-icons/ri';
 import {CiBellOn, CiSearch} from 'react-icons/ci';
+import {BsStack} from 'react-icons/bs';
+import {CgShoppingCart} from 'react-icons/cg';
 
 const Navbar = () => {
 
@@ -34,6 +36,8 @@ const Navbar = () => {
     window.addEventListener("scroll", scrollDown);
 
   return (
+    <>
+
     <div className='nav-wrapper'>
         <div className="nav-top-bg">
             <img src={navTopImg} alt="navTopImg" />
@@ -41,6 +45,9 @@ const Navbar = () => {
         <header className={navFixed ? 'nav-fixed' : ""}>
             <nav className="container">
                 <div className="nav-left">
+                    <div className="toggle-nav-btn">
+                        <BiMenuAltLeft/>
+                    </div>
                     <Link className='logo' to={'/'}>
                         {
                             darkMode ? 
@@ -71,7 +78,7 @@ const Navbar = () => {
                     <Link className='nav-login-btn' to={'/'}>
                         Sign In
                     </Link>
-                    <div className="nav-icon" title='Nofication'>
+                    <div className="nav-icon nav-icon-bell" title='Nofication'>
                         <CiBellOn/>
                     </div>
                     <div className="nav-icon"  title='Search'>
@@ -91,6 +98,21 @@ const Navbar = () => {
         </header>
         <div className={navFixed ? "nav-free-top" : ""}></div>
     </div>
+    <div className="demo-buy">
+        <div className="demo">
+            <div>
+                <BsStack/>
+            </div>
+            <p>Demos</p>
+        </div>
+        <div className="buy">
+            <div>
+                <CgShoppingCart/>
+            </div>
+            <p>Buy Now</p>
+        </div>
+    </div>
+    </>
   )
 }
 
