@@ -18,7 +18,7 @@ const Footer = () => {
     };
 
     const createToTopBtn = () => {
-      if(window.screenY > 600) {
+      if(window.scrollY > 600) {
         setTopBtn(true);
       }else{
         setTopBtn(false);
@@ -96,9 +96,8 @@ const Footer = () => {
         </div>
     </div>
     {
-      topBtn && 
-      <div className="back-to-top" onClick={toTop}>
-          <TfiAngleDoubleUp/>
+      topBtn && <div className="back-to-top" onClick={toTop}>
+        <TfiAngleDoubleUp/>
       </div>
     }
 </>

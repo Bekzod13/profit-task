@@ -204,4 +204,14 @@ footer{
     .foot-box-1 p {
         width: 100%;
     }
+    .footer-bottom{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .foot-left,
+    .foot-right{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
 }
