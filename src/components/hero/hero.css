@@ -74,6 +74,8 @@
     color: #fff;
     position: relative;
     justify-content: flex-end;
+    background-size: cover;
+    background-position: center center;
 }
 
 .hero-item-category{
