@@ -40,17 +40,24 @@ const EditorPick = () => {
                             <div className="editor-pick-hero-user-img">
                                 <img src={userImg} alt="user" />
                             </div>
-                            <b>Taylor Emma</b>
+                            <b>
+                                <Link to="/">
+                                    Taylor Emma
+                                </Link>
+                            </b>
                             <span>Aug 18, 2021</span>
                             <div className="editor-pick-mark">
                                 <RiBookmarkLine/>
                             </div>
                         </div>
                     </div>
+                    <div className="editor-pick-hero-right">
+                        <div className="editor-pick-category">TECHNOLOGY</div>
+                    </div>
                 </div>
+                
             </div>
             <div className="editor-pick-right">
-
             </div>
         </div>
     </div>
