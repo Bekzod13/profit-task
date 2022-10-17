@@ -18,7 +18,6 @@
 }
 .editor-pick-right{
     width: 30%;
-    border: 1px solid;
     min-width: 200px;
     position: relative;
     top: -40px;
@@ -223,6 +222,121 @@
 }
 .editor-pick-item-mark:hover{
     color: var(--red);
+}
+.editor-pick-weather-main{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.editor-pick-weather-left{
+    text-align: center;
+}
+.editor-pick-weather-left h1{
+    font-size: 50px;
+    color: var(--blue);
+}
+.editor-pick-weather-left h2{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.editor-pick-weather-left p{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray2);
+}
+.editor-pick-weather-right{
+    text-align: center;
+}
+.editor-pick-weather-right h1{
+    font-size: 45px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.editor-pick-weather-right h1 span{
+    font-size: 16px;
+    position: absolute;
+    top: 5px;
+}
+.editor-pick-weather-temprature{
+    display: flex;
+    margin-bottom: 20px;
+}
+.minus,
+.plus{
+    position: relative;
+    margin: 0 3px;
+}
+.tem-degre{
+    width: 5px;
+    height: 6px;
+    border: 1px solid;
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+.strelka-up,
+.strelka-down{
+    display: inline-flex;
+    transition: 0.5s;
+    transform: translateY(0);
+}
+.strelka-up{
+    color: var(--red);
+    animation: plus infinite 1s;
+}
+.strelka-down{
+    color: var(--blue2);
+    animation: minus infinite 1s;
+}
+@keyframes plus {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-5px);
+        opacity: .2;
+    }
+}
+@keyframes minus {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(5px);
+        opacity: .2;
+    }
+}
+.editor-pick-weather-humidity span{
+    color: var(--blue);
+    font-size: 15px;
+}
+.editor-pick-weather-wind{
+    margin-top: 10px;
+}
+.editor-pick-weather-wind span{
+    color: var(--yellow);
+    font-size: 15px;
+}
+.editor-pick-weather-name{
+    display: inline-flex;
+    padding: 3px 20px;
+    border-radius: 3px;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+}
+.editor-pick-weather{
+    padding-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
 }
 @media screen and (max-width: 1000px) {
     .editor-pick-left,

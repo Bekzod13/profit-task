@@ -2,8 +2,10 @@ import './editorPick.css';
 import { Link } from 'react-router-dom';
 
 // import icons
-import {BsFillStarFill} from 'react-icons/bs';
-import {RiBookmarkLine} from 'react-icons/ri';
+import {BsFillStarFill, BsArrowUp, BsArrowDown, BsWind} from 'react-icons/bs';
+import {BiMoon} from 'react-icons/bi';
+import {RiBookmarkLine, RiCelsiusFill} from 'react-icons/ri';
+import {IoWaterOutline} from 'react-icons/io5';
 
 // import images
 import userImg from '../../assets/images/hero/author.webp';
@@ -83,6 +85,53 @@ const EditorPick = () => {
                 </div>
             </div>
             <div className="editor-pick-right">
+                <div className="editor-pick-weather">
+                    <div className="editor-pick-weather-name">Weather</div>
+                    <div className="editor-pick-weather-main">
+                        <div className="editor-pick-weather-left">
+                            <h1><BiMoon/></h1>
+                            <h2>New York</h2>
+                            <p>Clear Sky</p>
+                        </div>
+                        <div className="editor-pick-weather-right">
+                            <h1>
+                                9
+                                <span>
+                                    <RiCelsiusFill/>
+                                </span>
+                            </h1>
+                            <div className="editor-pick-weather-temprature">
+                                <div className='plus'>
+                                    <span className="strelka-up strelka">
+                                        <BsArrowUp/>
+                                    </span>
+                                    {" "}11
+                                    <span className='tem-degre'></span>
+                                </div>
+                                {" "}_{" "}
+                                <div className='minus'>
+                                    <span className="strelka-down strelka">
+                                        <BsArrowDown/>
+                                    </span>
+                                    {" "}3
+                                    <span className='tem-degre'></span>
+                                </div>
+                            </div>
+                            <div className="editor-pick-weather-humidity">
+                                <span>
+                                    <IoWaterOutline/>
+                                </span>
+                                {" "}65%
+                            </div>
+                            <div className="editor-pick-weather-wind">
+                                <span>
+                                    <BsWind/>
+                                </span>
+                                {" "}3 km/h
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
