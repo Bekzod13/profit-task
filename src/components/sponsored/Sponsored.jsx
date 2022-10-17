@@ -24,7 +24,7 @@ const Sponsored = () => {
         <div className="sponsored-wrapper">
             <div className="sponsored-box sponsored-box-1">
                 <div className="sponsor-left">
-                    <div className="sponsor-category">TECHNOLOGY</div>
+                    <div className="sponsor-category sponsor-category-1">TECHNOLOGY</div>
                     <Link to="/" className="sponsor-title">Apple Watch Series 9 Reportedly Has Flat Sides and Bigger Screens</Link>
                     <div className="sponsor-user">
                         <div className="sponsor-user-img">
@@ -43,7 +43,7 @@ const Sponsored = () => {
             </div>
             <div className="sponsored-box sponsored-box-2">
                 <div className="sponsor-left">
-                    <div className="sponsor-category">TRAVEL</div>
+                    <div className="sponsor-category sponsor-category-2">TRAVEL</div>
                     <Link to="/" className="sponsor-title">REVIEW: San Diego City Beat’s a Night at The Besties</Link>
                     <div className="sponsor-bottom">
                         <div className="sponsor-colors">
