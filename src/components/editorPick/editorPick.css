@@ -1,0 +1,8 @@
+.editor-pick-header{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.editor-pick-header span{
+    color: var(--red);
+}
