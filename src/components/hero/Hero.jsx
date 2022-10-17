@@ -82,7 +82,6 @@ const Hero = () => {
                             {
                                 item.id === 1 && <p>{item.text}</p>
                             }
-
                         <div className="hero-item-bottom">
                             <div className="hero-bottom-left">
                                 <div className="hero-item-author-img">
