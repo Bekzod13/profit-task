@@ -94,7 +94,7 @@ const Hero = () => {
                                 </div>
                                 <p>{item.date}</p>
                             </div>
-                            <div className="hero-bottom-right">
+                            <div title='Save it' className="hero-bottom-right">
                                 <RiBookmarkLine/>
                             </div>
                         </div>
