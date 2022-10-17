@@ -7,6 +7,9 @@ import {RiBookmarkLine} from 'react-icons/ri';
 
 // import images
 import userImg from '../../assets/images/hero/author.webp';
+import editorImg1 from '../../assets/images/editorPick/img1.webp';
+import editorImg2 from '../../assets/images/editorPick/img2.webp';
+import editorImg3 from '../../assets/images/editorPick/img3.webp';
 
 const EditorPick = () => {
   return (
@@ -55,7 +58,29 @@ const EditorPick = () => {
                         <div className="editor-pick-category">TECHNOLOGY</div>
                     </div>
                 </div>
-                
+                <div className="editor-pick-items">
+                    {
+                        editorData.map(item=>(
+                            <div className="editor-pick-item" key={item.id}>
+                                <Link to={'/'} className="editor-pick-item-img">
+                                    <img src={item.img} alt={item.title} />
+                                </Link>
+                                <Link to={'/'} className={`editor-pick-item-category editor-pick-item-category-${item.id}`}>
+                                    {item.category}
+                                </Link>
+                                <Link to={'/'} className="editor-pick-item-title">
+                                    {item.title}
+                                </Link>
+                                <div className="editor-pick-item-bottom">
+                                    <span>{item.date}</span>
+                                    <span className="editor-pick-item-mark">
+                                        <RiBookmarkLine/>
+                                    </span>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <div className="editor-pick-right">
             </div>
@@ -64,4 +89,41 @@ const EditorPick = () => {
   )
 }
 
-export default EditorPick
+export default EditorPick;
+
+const editorData = [
+    {
+        id: 1,
+        category: "TECHNOLOGY",
+        title: "Self-Driving Cars: Everything You Need to Know",
+        img: editorImg1,
+        date: "Aug 7, 2021",
+    },
+    {
+        id: 2,
+        category: "SCIENCE",
+        title: "Girls in Ocean Science Conference a First at Maritime Museum",
+        img: editorImg2,
+        date: "Aug 6, 2021",
+    },
+    {
+        id: 3,
+        category: "TECHNOLOGY",
+        title: "Google Must Allow Developers to Use Other Payment Systems",
+        img: editorImg3,
+        date: "Aug 6, 2021",
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,6 +20,8 @@
     width: 30%;
     border: 1px solid;
     min-width: 200px;
+    position: relative;
+    top: -40px;
 }
 .editor-pick-hero{
     display: flex;
@@ -143,6 +145,85 @@
 .editor-pick-mark:hover{
     color: var(--red);
 }
+.editor-pick-items{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.editor-pick-item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 230px;
+    flex: 1;
+}
+.editor-pick-item-img{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+.editor-pick-item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.editor-pick-item-category{
+    width: 100px;
+    display: flex;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    top: -20px;
+}
+.editor-pick-item-category::before{
+    content: "";
+    display: flex;
+    background: var(--green);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    transform: skewX(-30deg);
+    border-radius: 4px;
+}
+.editor-pick-item-category-2::before{
+    background: var(--blue);
+}
+.editor-pick-item-title{
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s;
+}
+.editor-pick-item-title:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+.editor-pick-item-bottom{
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+.editor-pick-item-bottom span{
+    font-size: 13px;
+}
+.editor-pick-item-mark{
+    font-size: 18px !important;
+    cursor: pointer;
+    transition: .3s;
+}
+.editor-pick-item-mark:hover{
+    color: var(--red);
+}
 @media screen and (max-width: 1000px) {
     .editor-pick-left,
     .editor-pick-right{
@@ -150,5 +231,27 @@
     }
     .editor-pick-main{
         flex-wrap: wrap;
+    }
+    .editor-pick-item-category{
+        display: none;
+    }
+    .editor-pick-item{
+        display: grid;
+        grid-template-areas: 
+        "title title img"
+        "bottom bottom img";
+    }
+    .editor-pick-item-img{
+        grid-area: img;
+        height: 100px;
+        width: 150px;
+        margin-left: 10px;
+    }
+    .editor-pick-item-title{
+        grid-area: title;
+        width: calc(100% - 100px);
+    }
+    .editor-pick-item-bottom{
+        grid-area: bottom;
     }
 }
