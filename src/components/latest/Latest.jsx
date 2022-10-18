@@ -49,7 +49,11 @@ const Latest = () => {
                                     <div className="latest-item-user-img">
                                         <img src={userImg} alt={item.author} />
                                     </div>
-                                    <b className="latest-item">{item.author}</b>
+                                    <Link to='/' className="latest-item-author">
+                                        <b>
+                                            {item.author}
+                                        </b>
+                                    </Link>
                                     <span>{item.publishedAt}</span>
                                     <div className="latest-item-mark">
                                         <RiBookmarkLine/>
@@ -81,7 +85,7 @@ const Latest = () => {
                     ))
                 }
             </div>
-            <div className="latest-left-load-btn" onClick={loadMore}>Load more</div>
+            <div className="latest-left-load-btn" onClick={loadMore}>Show More</div>
         </div>
         <div className="latest-right"></div>
     </div>
