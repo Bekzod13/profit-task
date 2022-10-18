@@ -1,0 +1,93 @@
+.discover{
+    padding: 50px 0;
+    background: #E8E8E8;
+}
+.discover.darkDis{
+    padding: 50px 0;
+    background: #16191D;
+}
+.discover-main{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.discover-item{
+    flex: 1;
+    width: 25%;
+    min-width: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: .3s;
+    background: #E2E2E2;
+    position: relative;
+    padding-bottom: 20px;
+}
+.discover-item-img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.discover-item-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.discover-item.darkDis{
+    background: #212427;
+}
+.discover-item:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+.discover-item-title{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+.discover-subcount{
+    font-size: 12px;
+    padding: 0 20px;
+}
+.discover-plus{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid var(--fcolor);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    cursor: pointer;
+    transition: .3s;
+}
+.discover-plus:hover{
+    color: var(--blue);
+    opacity: 1;
+    border: 1px solid var(--blue);
+}
+.discover-footer{
+    margin-top: 30px;
+    color: var(--red);
+    letter-spacing: 2;
+    font-size: 13px;
+    font-family: 'Oxygen', sans-serif;
+}
+.discover-footer a{
+    margin-left: 10px;
+    font-weight: 600;
+}
+.discover-footer a{
+    margin-left: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+.discover-footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--red) !important;
+}

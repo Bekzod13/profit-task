@@ -1,7 +1,7 @@
 
 .most-read{
     width: 100%;
-    background: #172234;
+    background: linear-gradient(to bottom, #172234, #12151A);
     color: #fff;
     padding: 50px 0;
 }
@@ -196,6 +196,8 @@
 .most-read-bottom-item-title{
     font-size: 16px;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
 }
 .most-read-bottom-item-img{
     width: 130px;
@@ -226,4 +228,21 @@
 }
 .most-read-bottom-item-details span{
     color: var(--gray2);
+}
+.most-read-bottom-item-details::after{
+    content: '04';
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+    color: var(--gray2);
+    font-size: 50px;
+    font-weight: 600;
+}
+.most-read-bottom-item-details-2::after{
+    content: '05';
+}
+.most-read-bottom-item-details-3::after{
+    content: '06';
 }

@@ -92,7 +92,7 @@ const MostRead = () => {
                         <div className="most-read-bottom-item-img">
                             <img src={item.img} alt={item.title} />
                         </div>
-                        <div className="most-read-bottom-item-details">
+                        <div className={`most-read-bottom-item-details most-read-bottom-item-details-${item.id}`}>
                             <Link to={'/'} className="most-read-bottom-item-title">
                                 {item.title}
                             </Link>

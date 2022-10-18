@@ -1,3 +1,4 @@
+import Discover from '../components/discover/Discover'
 import EditorPick from '../components/editorPick/EditorPick'
 import Hero from '../components/hero/Hero'
 import MostRead from '../components/mostRead/MostRead'
@@ -10,6 +11,7 @@ const Home = () => {
       <Sponsored/>
       <EditorPick/>
       <MostRead/>
+      <Discover/>
     </>
   )
 }
