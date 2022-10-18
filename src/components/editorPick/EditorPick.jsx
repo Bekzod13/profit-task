@@ -6,6 +6,7 @@ import {BsFillStarFill, BsArrowUp, BsArrowDown, BsWind, BsSun, BsCloudSun, BsClo
 import {BiMoon} from 'react-icons/bi';
 import {RiBookmarkLine, RiCelsiusFill} from 'react-icons/ri';
 import {IoWaterOutline} from 'react-icons/io5';
+import {FaFacebookF, FaTwitter, FaPinterest, FaInstagram} from 'react-icons/fa';
 
 // import images
 import userImg from '../../assets/images/hero/author.webp';
@@ -146,6 +147,29 @@ const EditorPick = () => {
                         }
                     </div>
                 </div>
+                <div className="editor-pick-social">
+                    <div className="editor-pick-social-header">
+                        <span>{"/"}</span>
+                        Follow US
+                        <span>{"/"}</span>
+                    </div>
+                    <div className="editor-pick-socials">
+                        {
+                            socialMedias.map(item=>(
+                                <div className={`editor-pick-social-media editor-pick-social-media-${item.id}`} key={item.id}>
+                                    <div className={`editor-pick-social-media-left editor-pick-social-icon-${item.id}`}>
+                                        {item.icon}
+                                    </div>
+                                    <div className="editor-pick-social-media-right">
+                                        <p>{item.title}</p>
+                                        <span>{item.subtitle}</span>
+                                    </div>
+                                </div>
+                            ))
+                        }
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -177,8 +201,6 @@ const editorData = [
         date: "Aug 6, 2021",
     }
 ]
-
-
 
 const weatherWeekData = [
     {
@@ -213,7 +235,32 @@ const weatherWeekData = [
     },
 ]
 
-
+const socialMedias = [
+    {
+        id: 1,
+        title: "248.1k Followers",
+        subtitle: "Like",
+        icon:<FaFacebookF/>
+    },
+    {
+        id: 2,
+        title: "69.1k Followers",
+        subtitle: "Follow",
+        icon:<FaTwitter/>
+    },
+    {
+        id: 3,
+        title: "134k Followers",
+        subtitle: "Pin",
+        icon:<FaPinterest/>
+    },
+    {
+        id: 4,
+        title: "54.3k Followers",
+        subtitle: "Follow",
+        icon:<FaInstagram/>
+    },
+]
 
 
 

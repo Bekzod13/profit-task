@@ -1,0 +1,15 @@
+.little-title{
+    font-size: 22px;
+    color: var(--fcolor);
+    font-weight: 600;
+}
+.little-title.true{
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 600;
+}
+.little-title span{
+    color: var(--red);
+    font-weight: 600;
+    margin: 0 5px;
+}

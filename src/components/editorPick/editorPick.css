@@ -373,6 +373,108 @@
     position: relative;
     top: -4px;
 }
+.editor-pick-social{
+    margin: 20px 0;
+}
+.editor-pick-social-header{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.editor-pick-social-header span{
+    font-weight: 700;
+    color: var(--red);
+    margin: 0 5px;
+    font-size: 18px;
+}
+.editor-pick-socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.editor-pick-social-media{
+    min-width: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--gray);
+    flex: 1;
+    border-radius: 4px;
+    height: 55px;
+    cursor: pointer;
+    transition: .3s;
+}
+.editor-pick-social-media-left{
+    height: 100%;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    transition: .3s;
+}
+.editor-pick-social-media-right{
+    width: calc(100% - 55px);
+}
+.editor-pick-social-media-right p{
+    font-weight: 600;
+}
+.editor-pick-social-media-right span{
+    font-size: 12px;
+    color: var(--gray2);
+    transition: .3s;
+}
+.editor-pick-social-icon-1{
+    color: var(--blue);
+}
+.editor-pick-social-icon-2{
+    color: var(--blue2);
+}
+.editor-pick-social-icon-3{
+    color: var(--red);
+}
+.editor-pick-social-icon-4{
+    color: var(--vio);
+}
+.editor-pick-social-media-1:hover{
+    background: var(--blue);
+    border-color: var(--blue);
+    box-shadow: 0 0 10px 1px var(--blue);
+    color: #fff;
+}
+.editor-pick-social-media-2:hover{
+    color: #fff;
+    background: var(--blue2);
+    border-color: var(--blue2);
+    box-shadow: 0 0 10px 1px var(--blue2);
+}
+.editor-pick-social-media-3:hover{
+    color: #fff;
+    background: var(--red);
+    border-color: var(--red);
+    box-shadow: 0 0 10px 1px var(--red);
+}
+.editor-pick-social-media-4:hover{
+    color: #fff;
+    background: var(--vio);
+    border-color: var(--vio);
+    box-shadow: 0 0 10px 1px var(--vio);
+}
+.editor-pick-social-media-1:hover .editor-pick-social-media-left,
+.editor-pick-social-media-1:hover .editor-pick-social-media-right span,
+.editor-pick-social-media-2:hover .editor-pick-social-media-left,
+.editor-pick-social-media-2:hover .editor-pick-social-media-right span,
+.editor-pick-social-media-3:hover .editor-pick-social-media-left,
+.editor-pick-social-media-3:hover .editor-pick-social-media-right span,
+.editor-pick-social-media-4:hover .editor-pick-social-media-left,
+.editor-pick-social-media-4:hover .editor-pick-social-media-right span{
+    color: #fff;
+}
+.editor-pick-social-media:hover{
+    transform: translateY(-3px);
+}
+
 @media screen and (max-width: 1000px) {
     .editor-pick-left,
     .editor-pick-right{
