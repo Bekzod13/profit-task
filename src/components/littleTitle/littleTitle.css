@@ -1,11 +1,11 @@
 .little-title{
     font-size: 22px;
-    color: var(--fcolor);
+    color: var(--white);
     font-weight: 600;
 }
 .little-title.true{
     font-size: 22px;
-    color: var(--white);
+    color: #fff;
     font-weight: 600;
 }
 .little-title span{
