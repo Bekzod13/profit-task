@@ -2,7 +2,7 @@ import './editorPick.css';
 import { Link } from 'react-router-dom';
 
 // import icons
-import {BsFillStarFill, BsArrowUp, BsArrowDown, BsWind} from 'react-icons/bs';
+import {BsFillStarFill, BsArrowUp, BsArrowDown, BsWind, BsSun, BsCloudSun, BsCloudRain} from 'react-icons/bs';
 import {BiMoon} from 'react-icons/bi';
 import {RiBookmarkLine, RiCelsiusFill} from 'react-icons/ri';
 import {IoWaterOutline} from 'react-icons/io5';
@@ -131,6 +131,20 @@ const EditorPick = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="editor-pick-weather-week">
+                        {
+                            weatherWeekData.map(item=>(
+                                <div className="editor-pick-weather-week-day" key={item.id}>
+                                    <span>{item.title}</span>
+                                    <div>{item.icon}</div>
+                                    <p>
+                                        {item.temprature} 
+                                        <span><RiCelsiusFill/></span>
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,7 +180,38 @@ const editorData = [
 
 
 
-
+const weatherWeekData = [
+    {
+        id: 1,
+        title: "Sun",
+        icon: <BsSun/>,
+        temprature: "19"
+    },
+    {
+        id: 2,
+        title: "Mon",
+        icon: <BsCloudSun/>,
+        temprature: "17"
+    },
+    {
+        id: 3,
+        title: "Tue",
+        icon: <BsCloudRain/>,
+        temprature: "15"
+    },
+    {
+        id: 4,
+        title: "Wen",
+        icon: <BsCloudSun/>,
+        temprature: "19"
+    },
+    {
+        id: 5,
+        title: "Thu",
+        icon: <BsSun/>,
+        temprature: "21"
+    },
+]
 
 
 

@@ -338,6 +338,41 @@
     border-radius: 4px;
     box-shadow: var(--shadow);
 }
+.editor-pick-weather-week{
+    display: flex;
+    padding: 0px 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    gap: 5px;
+}
+.editor-pick-weather-week-day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.editor-pick-weather-week-day > span{
+    display: flex;
+    padding: 3px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: var(--gray2);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+}
+.editor-pick-weather-week-day > div{
+    display: flex;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--gray2);
+}
+.editor-pick-weather-week-day > p> span{
+    display: inline-flex;
+    font-size: 10px;
+    position: relative;
+    top: -4px;
+}
 @media screen and (max-width: 1000px) {
     .editor-pick-left,
     .editor-pick-right{
