@@ -1,0 +1,52 @@
+.latest{
+    padding: 50px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+.latest-left{
+    width: 65%;
+    min-width: 300px;
+    position: relative;
+    padding-top: 20px;
+    flex: 7;
+}
+.latest-left-all{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+.latest-left-all span{
+    margin-left: 5px;
+    display: inline-flex;
+    top: 3px;
+}
+.latest-left-all:hover{
+    color: var(--red);
+}
+.latest-left-main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.latest-item{
+    width: 100%;
+    overflow: hidden;
+}
+
+.latest-right{
+    width: 35%;
+    height: 500px;
+    border: 1px solid;
+    min-width: 200px;
+    flex: 3;
+    position: sticky;
+    top: 70px;
+}
