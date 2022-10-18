@@ -8,6 +8,9 @@ import userImg from '../../assets/images/hero/author.webp';
 import hero from '../../assets/images/mostRead/hero.jpg';
 import hero2 from '../../assets/images/mostRead/hero2.webp';
 import hero3 from '../../assets/images/mostRead/hero3.webp';
+import img1 from '../../assets/images/mostRead/img1.webp';
+import img2 from '../../assets/images/mostRead/img2.webp';
+import img3 from '../../assets/images/mostRead/img3.webp';
 
 
 // import icons 
@@ -59,7 +62,7 @@ const MostRead = () => {
                         </div>
                     </div>
                 </div>
-                <div className="most-read-right-box">
+                <div className="most-read-right-box most-read-right-box-2">
                     <div className="most-read-right-img">
                         <img src={hero3} alt="" />
                     </div>
@@ -67,7 +70,7 @@ const MostRead = () => {
                         BUSINESS
                     </div>
                     <Link to={'/'}  className="most-read-right-title">
-                        9 Awesome Destinations for Solo Female Travelers
+                    Personal loan Interest Rates Rise, Still Much Lower than Same Time Last Year
                     </Link>
                     <div className="most-read-hero-bottom">
                         <div className="most-read-hero-bottom-img">
@@ -82,9 +85,60 @@ const MostRead = () => {
                 </div>
             </div>
         </div>
-        <div className="container most-read-bottom"></div>
+        <div className="container most-read-bottom">
+            {
+                mostReadData.map(item=>(
+                    <div className="most-read-bottom-item" key={item.id}>
+                        <div className="most-read-bottom-item-img">
+                            <img src={item.img} alt={item.title} />
+                        </div>
+                        <div className="most-read-bottom-item-details">
+                            <Link to={'/'} className="most-read-bottom-item-title">
+                                {item.title}
+                            </Link>
+                            <span>
+                                {item.date}
+                            </span>
+                            <div className="most-read-bottom-mark">
+                                <RiBookmarkLine/>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
   )
 }
 
-export default MostRead
+export default MostRead;
+
+
+const mostReadData = [
+    {
+        id:1,
+        title: "How Fashion Insiders Are Dressing for New York Fashion Week",
+        img: img1,
+        date: "Sep 9, 2021"
+    },
+    {
+        id:2,
+        title: "What Are Some Ways to Prevent the Spread of COVID-19?",
+        img: img2,
+        date: "Aug 11, 2021"
+    },
+    {
+        id:3,
+        title: "A gene-Based Therapy Partially Restored a Blind Man’s Vision",
+        img: img3,
+        date: "Aug 13, 2021"
+    }
+]
+
+
+
+
+
+
+
+
