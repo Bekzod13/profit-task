@@ -3,11 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import Context from "./context/Context";
 import MainRoutes from "./routes/MainRoutes";
 import Api from './api/Api';
+import Spinner from "./components/spinner/Spinner";
 
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
   const body = document.body;
@@ -32,10 +34,20 @@ function App() {
     setBlogs
   }
 
+  setTimeout(() => {
+    setLoading(true);
+  }, 3000);
+
+
+
   return (
     <Context.Provider value={contextValue}>
       <BrowserRouter>
-        <MainRoutes/>
+      {
+        loading ? 
+        <MainRoutes/>:
+        <Spinner/>
+      }
       </BrowserRouter>
     </Context.Provider>
   );
