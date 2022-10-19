@@ -24,8 +24,6 @@ const FromBlog = () => {
 
     const showBlogs = blogs.slice(0, loadCount);
 
-    console.log(showBlogs);
-
   return (
     <div className='container from-blog'>
         <div className="from-blog-title">
