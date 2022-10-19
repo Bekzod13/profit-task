@@ -1,20 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Context from "./context/Context";
 import MainRoutes from "./routes/MainRoutes";
+import Api from './api/Api';
 
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+  const [blogs, setBlogs] = useState([]);
 
   const body = document.body;
 
   darkMode ? (body.className = "dark"):(body.className = "");
 
+
+  useEffect(() => {
+      Api.get("").then(res=>{
+          setBlogs(res.data.articles)
+      });
+  }, []);
+
   const contextValue = {
     darkMode, 
-    setDarkMode
+    setDarkMode,
+    blogs, 
+    setBlogs
   }
 
   return (

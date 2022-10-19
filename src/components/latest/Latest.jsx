@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import Context from '../../context/Context';
+import LittleTitle from '../littleTitle/LittleTitle';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Api from '../../api/Api';
 import './latest.css';
 
 
 // import icons 
 import {BsArrowRightCircle} from 'react-icons/bs';
-import LittleTitle from '../littleTitle/LittleTitle';
 import {RiBookmarkLine} from 'react-icons/ri';
 
 // import images
@@ -14,14 +14,9 @@ import userImg from '../../assets/images/hero/author.webp';
 
 const Latest = () => {
 
-    const [blogs, setBlogs] = useState([]);
-    const [blogCount, setBlogCount] = useState(16);
+    const {blogs} = useContext(Context);
 
-    useEffect(() => {
-        Api.get("").then(res=>{
-            setBlogs(res.data.articles)
-        });
-    }, []);
+    const [blogCount, setBlogCount] = useState(16);
 
     const loadMore = () => {
         setBlogCount(blogCount + 10);
