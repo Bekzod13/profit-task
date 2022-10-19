@@ -9,6 +9,7 @@ import './latest.css';
 import {BsArrowRightCircle} from 'react-icons/bs';
 import {RiBookmarkLine} from 'react-icons/ri';
 import {CiBellOn} from 'react-icons/ci';
+import {MdShowChart} from 'react-icons/md';
 
 // import images
 import userImg from '../../assets/images/hero/author.webp';
@@ -116,6 +117,29 @@ const Latest = () => {
                         </div>
                     ))
                 }
+            </div>
+            <div className="latest-right-header-small">
+                <LittleTitle title={"Global Coronavirus Cases"} dark={false} />
+            </div>
+            <div className="latest-covid">
+                <div className="latest-covid-item">
+                    <div>
+                        <span><MdShowChart/></span>
+                        Confirmed 
+                    </div>
+                    <div className="latest-covid-donfirm">621.02M</div>
+                </div>
+                <div className="latest-covid-item">
+                    <div>
+                        <span><MdShowChart/></span>
+                        Death
+                    </div>
+                    <div className="latest-covid-donfirm red">6.56M</div>
+                </div>
+                <div className='latest-right-bottom-covid'>
+                    <small>More Information:</small>
+                    <Link to={'/'}> Covid-19 Statistics</Link>
+                </div>
             </div>
         </div>
     </div>
