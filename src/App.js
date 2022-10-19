@@ -9,7 +9,7 @@ import Spinner from "./components/spinner/Spinner";
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
 
   const body = document.body;
@@ -36,7 +36,7 @@ function App() {
 
   setTimeout(() => {
     setLoading(true);
-  }, 2000);
+  }, 500);
 
 
 

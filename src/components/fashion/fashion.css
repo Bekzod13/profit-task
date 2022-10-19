@@ -1,0 +1,123 @@
+.fashion{
+    padding: 50px 10px;
+}
+.fashion-main{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.fashion-item{
+    width: 33%;
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.fashion-item-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+}
+.fashion-item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fashion-item-category{
+    font-size: 13px;
+    color: #fff;
+    width: 90px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -23px;
+    left: -0px;
+    z-index: 10;
+}
+.fashion-item-category::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--red);
+    z-index: -1;
+    border-radius: 4px;
+    transform: skewX(-30deg);
+}
+.fashion-item-title{
+    font-size: 22px;
+    font-weight: 600;
+    transition: .3s;
+}
+.fashion-item-title:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+.fashion-item-bottom{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.fashion-auther-img{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.fashion-auther-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fashion-item-bottom span{
+    margin-left: 20px;
+    font-size: 13px;
+    color: var(--gray2);
+}
+.fashion-item-mark{
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    transition: .3s;
+}
+.fashion-item-mark:hover{
+    color: var(--red);
+}
+.fashion-control{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.fashion-control-btn{
+    display: inline-flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width: 110px;
+    border-radius: 4px;
+    margin: 10px;
+    transition: .3s;
+    cursor: pointer;
+    box-shadow: inset var(--shadow);
+}
+.fashion-control-btn span{
+    font-size: 12px;
+    margin: 0 2px;
+    position: relative;
+    top: 2px;
+}
+.fashion-control-btn:hover{
+    background: var(--red);
+    color: #fff;
+    box-shadow: 0 0 8px 1px var(--red);
+}

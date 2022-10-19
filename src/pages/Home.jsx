@@ -1,5 +1,6 @@
 import Discover from '../components/discover/Discover';
 import EditorPick from '../components/editorPick/EditorPick';
+import Fashion from '../components/fashion/Fashion';
 import Hero from '../components/hero/Hero';
 import Latest from '../components/latest/Latest';
 import MostRead from '../components/mostRead/MostRead';
@@ -20,6 +21,7 @@ const Home = () => {
       <WhatWatch/>
       <Politics/>
       <Writer/>
+      <Fashion/>
     </>
   )
 }
