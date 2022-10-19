@@ -1,6 +1,7 @@
 import Discover from '../components/discover/Discover';
 import EditorPick from '../components/editorPick/EditorPick';
 import Fashion from '../components/fashion/Fashion';
+import FromBlog from '../components/fromBlog/FromBlog';
 import Hero from '../components/hero/Hero';
 import Latest from '../components/latest/Latest';
 import MostRead from '../components/mostRead/MostRead';
@@ -22,6 +23,7 @@ const Home = () => {
       <Politics/>
       <Writer/>
       <Fashion/>
+      <FromBlog/>
     </>
   )
 }
