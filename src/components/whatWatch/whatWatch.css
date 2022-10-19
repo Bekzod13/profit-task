@@ -1,0 +1,183 @@
+.what-watch{
+    width: 100%;
+    padding: 50px 0;
+    background-image: linear-gradient(0deg,#12151a 0%,#172234 100%);
+
+}
+.what-watch-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.what-watch-all{
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    transition: .3s;
+}
+.what-watch-all:hover{
+    color: var(--red);
+}
+.what-watch-all span{ 
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+}
+.what-watch-main{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.what-watch-hero{
+    width: 65%;
+    min-width: 300px;
+    height: 450px;
+    flex: 65;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: animeWatch 15s infinite;
+    transition: .5s;
+    padding: 20px;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,.5);
+    background-image: url(../../assets/images/what-watch/hero.webp);
+}
+@keyframes animeWatch {
+    0%, 100%{
+        background-position: left top;
+    }
+    50%{
+        background-position: right bottom;
+    }
+}
+.what-watch-right{
+    width: 35%;
+    min-width: 200px;
+    flex: 35;
+}
+.what-watch-hero-category{
+    display: inline-flex;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+.what-watch-hero-category::after{
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background: var(--blue);
+    transform: skewX(-30deg);
+    border-radius: 4px;
+}
+.what-watch-title{
+    font-size: 42px;
+    color: #fff;
+    font-weight: 600;
+}
+.what-watch-text{
+    color: #fff;
+    font-family: 'Oxygen';
+}
+.what-watch-hero-bottom{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    align-items: center;
+}
+.what-watch-hero-user{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.what-watch-hero-user img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.what-watch-hero-user-name{
+    font-weight: 600;
+    color: #fff;
+    margin-right: 20px;
+}
+.what-watch-hero-bottom span{
+    opacity: .7;
+    color: #fff;
+    font-size: 12px;
+}
+.what-watch-mark{
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    transition: .3s;
+    cursor: pointer;
+}
+.what-watch-mark:hover{
+    color: var(--red);
+}
+.what-watch-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.what-watch-item{
+    display: flex;
+    gap: 10px;
+}
+.what-watch-item-left{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 65%;
+}
+.what-watch-item-left a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.what-watch-item-bottom{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+.what-watch-item-bottom b{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+.what-watch-item-bottom b:hover{
+    color: var(--red);
+}
+.what-watch-item-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 35%;
+}
+.what-watch-item-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

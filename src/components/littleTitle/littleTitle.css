@@ -2,6 +2,7 @@
     font-size: 22px;
     color: var(--fcolor);
     font-weight: 600;
+    display: inline-flex;
 }
 .little-title.true{
     color: #fff;
