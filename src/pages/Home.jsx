@@ -6,6 +6,7 @@ import MostRead from '../components/mostRead/MostRead';
 import Politics from '../components/politics/Politics';
 import Sponsored from '../components/sponsored/Sponsored';
 import WhatWatch from '../components/whatWatch/WhatWatch';
+import Writer from '../components/writer/Writer';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Latest/>
       <WhatWatch/>
       <Politics/>
+      <Writer/>
     </>
   )
 }

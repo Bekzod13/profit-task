@@ -28,8 +28,6 @@ const Latest = () => {
     }
     const blogsLoad = blogs.slice(0, blogCount);
 
-    console.log(blogsLoad);
-
   return (
     <div className='container latest'>
         <div className="latest-left">
