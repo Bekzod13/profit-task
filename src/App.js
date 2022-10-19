@@ -16,9 +16,13 @@ function App() {
 
 
   useEffect(() => {
-      Api.get("").then(res=>{
-          setBlogs(res.data.articles)
-      });
+
+    async function fetchData() {
+      const response = await Api.get("").then(res=>res.data);
+      setBlogs(response.articles)
+    }
+    fetchData();
+
   }, []);
 
   const contextValue = {
