@@ -8,9 +8,13 @@ import './latest.css';
 // import icons 
 import {BsArrowRightCircle} from 'react-icons/bs';
 import {RiBookmarkLine} from 'react-icons/ri';
+import {CiBellOn} from 'react-icons/ci';
 
 // import images
 import userImg from '../../assets/images/hero/author.webp';
+import img1 from '../../assets/images/latest/img1.webp';
+import img2 from '../../assets/images/latest/img2.webp';
+import img3 from '../../assets/images/latest/img3.webp';
 
 const Latest = () => {
 
@@ -82,9 +86,62 @@ const Latest = () => {
             </div>
             <div className="latest-left-load-btn" onClick={loadMore}>Show More</div>
         </div>
-        <div className="latest-right"></div>
+        <div className="latest-right">
+            <div className="latest-banner">
+                <h1 className="latest-banner-header">Create an Amazing <br /> Newspaper</h1>
+                <p className="latest-banner-text">
+                Discover thousands of options, easy to <br /> customize layouts, one-click to import demo <br /> and much more.
+                </p>
+                <Link to={'/'} className="latest-banner-link">Learn More</Link>
+            </div>
+            <div className="latest-right-header-small">
+                <LittleTitle title={"Sponsored Content"} dark={false} />
+            </div>
+            <div className="latest-right-news">
+                {
+                    latestData.map(item=>(
+                        <div key={item.id} className="latest-right-new">
+                            <div className="latest-right-item-left">
+                                <img src={item.img} alt={item.title} />
+                            </div>
+                            <div className="latest-right-item-right">
+                                <Link to={'/'} className="latest-right-item-title">
+                                    {item.title}
+                                </Link>
+                                <div className='latest-right-item-bottom'>
+                                    <span><CiBellOn/></span>
+                                    <small>Sponsored by</small>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
   )
 }
 
-export default Latest
+export default Latest;
+
+
+const latestData = [
+    {
+        id:1,
+        title: 'Sony WF-10XM4: Headphones Are Our Absolute Favorite',
+        img: img1
+    },
+    {
+        id:2,
+        title: 'The Top Secret Sights You Must See in Europe',
+        img: img2
+    },
+    {
+        id:3,
+        title: '10+ Pics That Prove Jennifer Is a Timeless Beauty',
+        img: img3
+    },
+]
+
+
+

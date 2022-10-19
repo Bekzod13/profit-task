@@ -116,7 +116,7 @@
 }
 .latest-right{
     width: 35%;
-    height: 500px;
+    height: 800px;
     border: 1px solid;
     min-width: 200px;
     flex: 3;
@@ -191,4 +191,91 @@
     color: #fff;
     background: var(--red);
     box-shadow: 0 0 6px 2px var(--red);
+}
+.latest-banner{
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../../assets//images/latest/right-bg.webp);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.latest-banner-header{
+    margin-bottom: 20px;
+}
+.latest-banner-text{
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom: 20px;
+}
+.latest-banner-link{
+    color: #fff;
+    width: 140px;
+    border-radius: 4px;
+    background: var(--red);
+    padding: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: .3s;
+}
+.latest-banner-link:hover{
+    box-shadow: 0 0 7px 1px var(--red);
+}
+.latest-right-header-small{
+    transform: scale(.8);
+    position: relative;
+    left: -40px;
+}
+.latest-right-news{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.latest-right-new{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.latest-right-item-left{
+    height: 80px;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 40%;
+}
+.latest-right-item-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.latest-right-item-right{
+    width: 60%;
+}
+.latest-right-item-title{
+    font-weight: 600;
+    transition: .3s;
+}
+.latest-right-item-title:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+.latest-right-item-bottom{
+    display: flex;
+    align-items: center;
+    color: var(--red);
+    margin-top: 10px;
+}
+.latest-right-item-bottom span{
+    font-size: 16px;
+    color: var(--gray2);
+    margin-top: 2px;
+    margin-left: 5px;
 }
