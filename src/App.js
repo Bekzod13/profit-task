@@ -9,13 +9,12 @@ import Spinner from "./components/spinner/Spinner";
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
 
   const body = document.body;
 
   darkMode ? (body.className = "dark"):(body.className = "");
-
 
   useEffect(() => {
     async function fetchData() {
@@ -23,23 +22,18 @@ function App() {
       setBlogs(response);
     }
     fetchData();
-
   }, []);
-
-  console.log(blogs);
 
   const contextValue = {
     darkMode, 
     setDarkMode,
     blogs, 
     setBlogs
-  }
+  };
 
   setTimeout(() => {
     setLoading(true);
   }, 2000);
-
-
 
   return (
     <Context.Provider value={contextValue}>

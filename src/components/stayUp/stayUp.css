@@ -1,0 +1,96 @@
+.stay-up{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: url(../../assets/images/stayUp/bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+}
+.stay-up-left, 
+.stay-up-right{
+    min-width: 300px;
+}
+
+.stay-up-left{
+    display: flex;
+    width: 40%;
+}
+.stay-up-img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.stay-up-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.stay-up-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0;
+}
+.stay-up-title h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.stay-up-title p{
+   line-height: 22px;
+}
+
+.stay-up-right{
+    width: 60%;
+}
+.stay-up-main{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.stay-up-main input{
+    display: inline-flex;
+    background: #88888826;
+    padding: 15px 20px;
+    border-radius: 3px;
+    width: calc(100% - 160px);
+    margin-right: 10px;
+    border: none;
+    outline: none;
+}
+.stay-up-main button{
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    background: var(--red);
+    padding: 15px 20px;
+    border-radius: 3px;
+    width: 160px;
+    border: none;
+    outline: none;
+}
+#checkboxSignUpNow{
+    margin-right: 5px;
+}
+@media screen and (max-width:768px) {
+    .stay-up-left, 
+    .stay-up-right{
+        flex: 1;
+    }
+    .stay-up{
+        margin: 50px 10px;
+        width: calc(100% - 20px);
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}

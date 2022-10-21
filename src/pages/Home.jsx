@@ -7,6 +7,7 @@ import Latest from '../components/latest/Latest';
 import MostRead from '../components/mostRead/MostRead';
 import Politics from '../components/politics/Politics';
 import Sponsored from '../components/sponsored/Sponsored';
+import StayUp from '../components/stayUp/StayUp';
 import WhatWatch from '../components/whatWatch/WhatWatch';
 import Writer from '../components/writer/Writer';
 
@@ -23,6 +24,7 @@ const Home = () => {
       <Politics/>
       <Writer/>
       <Fashion/>
+      <StayUp/>
       <FromBlog/>
     </>
   )
