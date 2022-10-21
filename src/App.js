@@ -9,7 +9,7 @@ import Spinner from "./components/spinner/Spinner";
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
   const body = document.body;
@@ -18,14 +18,15 @@ function App() {
 
 
   useEffect(() => {
-
     async function fetchData() {
       const response = await Api.get("").then(res=>res.data);
-      setBlogs(response.articles)
+      setBlogs(response);
     }
     fetchData();
 
   }, []);
+
+  console.log(blogs);
 
   const contextValue = {
     darkMode, 

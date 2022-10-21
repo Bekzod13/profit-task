@@ -34,7 +34,7 @@ const FromBlog = () => {
                 showBlogs.map((item, index)=>(
                     <div key={index} className="from-blog-item">
                         <div className="from-blog-left">
-                            <img src={item.urlToImage || noImg} alt={item.title} />
+                            <img src={item.images[0] || noImg} alt={item.title} />
                                 {
                                     index % 3 === 0 &&
                                 <div className="from-blog-category orange">

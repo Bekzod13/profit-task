@@ -16,6 +16,7 @@ import userImg from '../../assets/images/hero/author.webp';
 import img1 from '../../assets/images/latest/img1.webp';
 import img2 from '../../assets/images/latest/img2.webp';
 import img3 from '../../assets/images/latest/img3.webp';
+import noImg from '../../assets/images/noImg.jpg';
 
 const Latest = () => {
 
@@ -77,7 +78,7 @@ const Latest = () => {
                                             BUSINESS
                                     </div>
                                 }
-                                <img src={item.urlToImage} alt={item.title} />
+                                <img src={item.images[0] || noImg} alt={item.title} />
                             </div>
                         </div>
                     ))
